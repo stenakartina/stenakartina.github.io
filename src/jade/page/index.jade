@@ -1,0 +1,122 @@
+block vars
+	- var description = "";
+	- var keywords = "";
+	- var pagename = "";
+	- var pagetitle = "Роспись стен в Москве и Таганроге";
+doctype html
+html(lang="ru", ng-app="rospiSten")
+	head
+		meta(charset="UTF-8")
+		title #{pagetitle}
+		meta(name="description", content="#{description}")
+		meta(name="keywords", content="#{keywords}")
+		link(rel="stylesheet", href="css/style.css")
+		link(rel="shortcut icon", href="favicon.ico")
+		script(src='js/vendor/jquery.1.9.1.min.js')
+		script(src="js/vendor/modernizr-2.6.2.min.js")
+		script(src="js/vendor/angular.min.js")
+	body.home(itemscope itemtype="http://schema.org/Organization", ng-controller="mainApp", ng-click="closeModal()")
+		.content-wrap
+			header.header
+				h1.header__title
+					| Роспись стен
+				ul.socials__list
+					li.socials__title
+						| Расскажите о нас
+					li.socials__item
+						<i class="fa fa-vk fa-lg"></i>
+					li.socials__item
+						<i class="fa fa-facebook fa-lg"></i>
+					li.socials__item
+						<i class="fa fa-odnoklassniki fa-lg"></i>
+					li.socials__item
+						<i class="fa fa-twitter fa-lg"></i>
+					//- li.socials__item
+					//- 	<i class="fa fa-skype fa-lg"></i>
+					//- li.socials__item
+					//- 	<i class="fa fa-envelope-o fa-lg"></i>
+			.content(ng-controller="rospiStenAlbumCtrl")
+				.main-slider
+					.main-slider__container(ng-mouseenter="stopAutoslide()", ng-mouseleave="startAutoslide()")
+						ul.main-slider__list(ng-click="$event.stopPropagation();")
+							li.main-slider__item(ng-repeat="image in selectedAlbum[0].images", ng-style="{'background-image':'url('+image.link+')'}", ng-class="{'active': image.selected}", ng-click="openLightboxModal(image)")
+						.main-slider__right(ng-click="nextSlide()", ng-if="selectedAlbum[0].images.length > 1")
+							<i class="fa fa-angle-right fa-5x"></i>
+						.main-slider__left(ng-click="prevSlide()", ng-if="selectedAlbum[0].images.length > 1")
+							<i class="fa fa-angle-left fa-5x"></i>
+					ul.main-slider__pag-list
+						li.main-slider__pag-item(ng-repeat="image in selectedAlbum[0].images", ng-class="{'active': image.selected}", ng-click="selectSlide(image)")
+				.albums-slider
+					h2.section-title
+						| Наши альбомы
+					ul.albums-slider__list
+						li.albums-slider__item(ng-repeat="album in albums", ng-click="selectAlbum(album)", ng-style="{'background-image':'url('+album.images[0].link+')'}", ng-class="{'albums-slider__item_selected': album.selected}")
+							.albums-slider__container
+								.albums-slider__title
+									| {{album.title}}
+								.albums-slider__description
+									| {{album.description}}
+				.lightbox(ng-show="$root.showModal", ng-if="lightboxImg", ng-cloak)
+					.lightbox__content(ng-click="$event.stopPropagation();")
+						img.lightbox__image(ng-src="{{lightboxImg.link}}", alt="slider-image")
+						.lightbox__description
+						.lightbox__prev(ng-click="lightboxPrev()", ng-if="selectedAlbum[0].images.length > 1")
+							<i class="fa fa-angle-left fa-3x"></i>
+						.lightbox__next(ng-click="lightboxNext()", ng-if="selectedAlbum[0].images.length > 1")
+							<i class="fa fa-angle-right fa-3x"></i>
+						.lightbox__close(ng-click="$root.showModal=false;")
+							<i class="fa fa-times fa-lg"></i>
+				.services
+					h2.section-title
+						| Техника и виды работ
+					ul.services__list
+						li.services__item
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aliquid quos provident saepe at, voluptatibus libero voluptates laborum mollitia delectus inventore natus alias distinctio voluptatum expedita voluptatem repellat temporibus nisi.
+						li.services__item
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aliquid quos provident saepe at, voluptatibus libero voluptates laborum mollitia delectus inventore natus alias distinctio voluptatum expedita voluptatem repellat temporibus nisi.
+						li.services__item
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aliquid quos provident saepe at, voluptatibus libero voluptates laborum mollitia delectus inventore natus alias distinctio voluptatum expedita voluptatem repellat temporibus nisi.
+				.contacts
+					h2.section-title
+						| Наши контакты
+					ul.contacts__list
+						li.contacts__item.contacts__item_lena
+							.contacts__description
+								.contacts__title
+									| Елена Великородная (Москва)
+								| бла бла бла
+								ul.contacts__description-list
+									li.contacts__description-item
+										<i class="fa fa-skype fa-lg"></i>
+										| link
+									li.contacts__description-item
+										<i class="fa fa-envelope-o fa-lg"></i>
+										| email
+									li.contacts__description-item
+										<i class="fa fa-phone fa-lg"></i>
+										| 17817258971985
+									li.contacts__description-item-socials
+										<a href="#"><i class="fa fa-vk fa-lg"></i></a>
+										<a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+										<a href="#"><i class="fa fa-odnoklassniki fa-lg"></i></a>
+										<a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+
+						li.contacts__item.contacts__item_katya
+							.contacts__description
+								.contacts__title
+									| Екатерина Великородная (Таганрог)
+								| бла бла бла
+								ul.contacts__description-list
+									li.contacts__description-item
+										<i class="fa fa-skype fa-lg"></i>
+										| skype
+									li.contacts__description-item
+										<i class="fa fa-envelope-o fa-lg"></i>
+										| link
+									li.contacts__description-item
+										<i class="fa fa-phone fa-lg"></i>
+										| 8-908-515-2953
+									li.contacts__description-item-socials
+										<a href="#"><i class="fa fa-vk fa-lg"></i></a>
+		script(src="js/plugins.js")
+		script(src="js/main.js")

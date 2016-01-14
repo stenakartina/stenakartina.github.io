@@ -1,2 +1,0 @@
-# stenakartina
-web-site

@@ -1,0 +1,33 @@
+block vars
+	- var description = "**** COMMODORE 64 BASIC V2 ****";
+	- var keywords = "ERROR";
+	- var pagename = "ERROR PAGE";
+	- var pagetitle = " ERROR PAGE | GOTO MAIN PAGE ";
+doctype html
+html(lang="ru", class="no-js")
+	head
+		meta(charset="UTF-8")
+		title #{pagetitle} - Stress_TN
+		meta(name="description", content="#{description}")
+		meta(name="keywords", content="#{keywords}")
+		meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
+		if development
+			link(rel="stylesheet", href="/css/style.css")
+		else
+			link(rel="stylesheet", href="/css/style.min.css")
+		link(rel="shortcut icon", type="image/gif", href="favicon.gif")
+		script(src="/js/vendor/modernizr-latest.js")
+	body.piano(itemscope itemtype="http://schema.org/Organization")
+		.loadscreen#error
+			.loadscreen_c64-preview
+				p.loadscreen_c64-preview_title
+					| **** COMMODORE 64 BASIC V2 ****
+					br
+					| 64K RAM SYSTEM 38911 BASIC BYTES FREE	
+				p.loadscreen_c64-preview_ram|READY.
+				p.loadscreen_c64-preview_ram.error-text
+				p.loadscreen_c64-preview_ram|FILE NOT FOUND
+				a(href="/").loadscreen_c64-preview_ram.errorLink|GOTO MAIN PAGE
+		script(src='/js/vendor/jquery.1.9.1.min.js')
+		script(src="/js/plugins.js")
+		script(src="/js/main.js")
