@@ -15,8 +15,14 @@ html(lang="ru", ng-app="rospiSten")
 		script(src='js/vendor/jquery.1.9.1.min.js')
 		script(src="js/vendor/modernizr-2.6.2.min.js")
 		script(src="js/vendor/angular.min.js")
-	body.home(itemscope itemtype="http://schema.org/Organization", ng-controller="mainApp", ng-click="closeModal()")
-		.content-wrap
+	body.home(itemscope itemtype="http://schema.org/Organization", ng-controller="mainApp", ng-click="closeModal()", data-ng-init="init()")
+		.main-preloader(ng-show="!$root.showModal")
+			span.main-preloader__icon
+				i.fa.fa-cog.fa-2x
+				i.fa.fa-paint-brush.fa-2x
+				span.main-preloader__text
+					| ПОДОЖДИТЕ
+		.content-wrap.unactive(ng-class="{'unactive': !$root.showModal}")
 			header.header
 				h1.header__title
 					| Роспись стен

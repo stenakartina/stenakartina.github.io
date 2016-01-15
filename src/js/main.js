@@ -2,10 +2,15 @@ var rospiSten = angular.module('rospiSten', []);
 
 rospiSten.run(function($rootScope) {
 	$rootScope.showModal = false;
+	$rootScope.documentLoaded = false;
 });
 
 rospiSten.controller('mainApp', function ($scope, $rootScope) {
-	$scope.closeModal = function(){
+	angular.element(document).ready(function () {
+		$rootScope.showModal = true;
+    });
+
+	$scope.init = function () {
 		$rootScope.showModal = false;
 	};
 });
