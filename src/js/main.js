@@ -1,17 +1,16 @@
 var rospiSten = angular.module('rospiSten', []);
 
 rospiSten.run(function($rootScope) {
-	$rootScope.showModal = false;
-	$rootScope.documentLoaded = false;
+	$rootScope.showPreloader = false;
 });
 
 rospiSten.controller('mainApp', function ($scope, $rootScope) {
 	angular.element(document).ready(function () {
-		$rootScope.showModal = true;
-    });
+		$rootScope.showPreloader = true;
+	});
 
 	$scope.init = function () {
-		$rootScope.showModal = false;
+		$rootScope.showPreloader = false;
 	};
 });
 
