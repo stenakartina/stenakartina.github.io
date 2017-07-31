@@ -16,7 +16,7 @@ rospiSten.controller('mainApp', function ($scope, $rootScope) {
 
 rospiSten.controller('rospiStenAlbumCtrl', function ($scope, $interval, $rootScope) {
 	$scope.albums = [
-		{
+		/*{
 			'id': 0,
 			'title': 'Bunker',
 			'description': '2й этаж заведения в стиле комиксов и т.д. и т.п.',
@@ -95,7 +95,147 @@ rospiSten.controller('rospiStenAlbumCtrl', function ($scope, $interval, $rootSco
 					'link': 'img/album_4/7.jpg',
 				}
 			]
-		}
+		}*/
+		{
+			'id': 0,
+			'title': 'Монументально-декоративная живопись',
+			'description': 'Примеры работ',
+			'images': [
+				{
+					'title': '11',
+					'link': 'img/album_5/1.jpg'
+				},{
+					'title': '12',
+					'link': 'img/album_5/2.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/3.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/4.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/5.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/6.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/7.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/8.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/9.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/10.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/11.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/12.jpg'
+				}
+			]
+		},
+		{
+			'id': 1,
+			'title': 'Станковая живопись,графика',
+			'description': 'Примеры работ',
+			'images': [
+				{
+					'title': '11',
+					'link': 'img/album_6/1.jpg'
+				},{
+					'title': '12',
+					'link': 'img/album_6/2.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_6/3.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_6/4.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_6/5.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_6/6.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_6/7.jpg'
+				}
+			]
+		},
+		{
+			'id': 2,
+			'title': 'Новая жизнь старых вещей',
+			'description': 'Примеры работ',
+			'images': [
+				{
+					'title': '11',
+					'link': 'img/album_7/1.jpg'
+				},{
+					'title': '12',
+					'link': 'img/album_7/2.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_7/3.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_7/4.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_7/5.jpg'
+				}
+			]
+		},
+		{
+			'id': 3,
+			'title': 'Идеи и наброски',
+			'description': 'Примеры работ',
+			'images': [
+				{
+					'title': '11',
+					'link': 'img/album_8/1.jpg'
+				},{
+					'title': '12',
+					'link': 'img/album_8/2.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/3.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/4.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/5.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/6.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/7.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/8.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/9.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/10.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/11.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_8/12.jpg'
+				}
+			]
+		},
 	];
 
 	$scope.selectedAlbum = [];
