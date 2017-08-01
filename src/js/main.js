@@ -137,6 +137,24 @@ rospiSten.controller('rospiStenAlbumCtrl', function ($scope, $interval, $rootSco
 				},{
 					'title': '13',
 					'link': 'img/album_5/12.jpg'
+				},{
+					'title': '11',
+					'link': 'img/album_1/3.jpg'
+				},{
+					'title': '11',
+					'link': 'img/album_2/2.jpg'
+				},{
+					'title': '11',
+					'link': 'img/album_2/3.jpg'
+				},{
+					'title': '11',
+					'link': 'img/album_4/7.jpg'
+				},{
+					'title': '11',
+					'link': 'img/album_4/5.jpg'
+				},{
+					'title': '11',
+					'link': 'img/album_4/6.jpg'
 				}
 			]
 		},
