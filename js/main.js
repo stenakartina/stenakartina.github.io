@@ -155,6 +155,63 @@ rospiSten.controller('rospiStenAlbumCtrl', function ($scope, $interval, $rootSco
 				},{
 					'title': '11',
 					'link': 'img/album_4/6.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/13.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/14.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/15.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/16.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/17.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/18.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/19.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/20.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/21.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/22.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/23.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/24.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/25.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/26.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/27.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/28.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/29.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/30.jpg'
+				},{
+					'title': '13',
+					'link': 'img/album_5/31.jpg'
 				}
 			]
 		},
