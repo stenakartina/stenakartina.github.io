@@ -2585,7 +2585,7 @@ body {
   position: relative;
   *zoom: 1;
   margin-bottom: 40px;
-  background: #c7c7c7 url('../img/contacts/sisters.jpg') no-repeat;
+  background: #c7c7c7 no-repeat;
   background-position: 50% 50%;
   background-size: contain;
   -webkit-box-shadow: 0px 0 4px #000000;
